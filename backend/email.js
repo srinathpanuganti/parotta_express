@@ -195,4 +195,51 @@ async function sendContactEmail({ name, email, message }) {
   await transporter.sendMail(ackMail);
 }
 
-module.exports = { sendOrderEmails, isEmailConfigured, sendContactEmail };
+async function sendPasswordResetEmail({ email, name, temporaryPassword }) {
+  if (!email || !temporaryPassword) throw new Error('missing password reset fields');
+
+  if (!isEmailConfigured()) {
+    // eslint-disable-next-line no-console
+    console.log('[email] SMTP not configured; printing reset info');
+    // eslint-disable-next-line no-console
+    console.log(`Reset for ${email} (${name || 'user'}): temp password "${temporaryPassword}"`);
+    return;
+  }
+
+  const { STORE_OWNER_EMAIL, MAIL_FROM, GMAIL_USER } = process.env;
+  const from = MAIL_FROM || GMAIL_USER;
+  const transporter = createTransporter();
+  const safeName = escapeHtml(name || 'there');
+
+  const userMail = {
+    from,
+    to: email,
+    subject: 'Your Parotta Express password reset',
+    text: `Hi ${name || 'there'},\n\nWe received a password reset request for your corporate account. Use this temporary password to sign in, then change it from your profile:\n\n${temporaryPassword}\n\nIf you did not request this, please contact support.\n\n-Parotta Express`,
+    html: `
+      <div style="font-family: Arial, sans-serif;">
+        <p>Hi ${safeName},</p>
+        <p>We received a password reset request for your corporate account.</p>
+        <p><strong>Temporary password:</strong></p>
+        <div style="padding:10px;border:1px solid #eee;border-radius:6px;background:#fafafa;display:inline-block;font-weight:bold;">${escapeHtml(temporaryPassword)}</div>
+        <p style="margin-top:10px;">Use it to sign in, then change your password from your profile.</p>
+        <p>If you did not request this, please contact support.</p>
+        <p style="margin-top:12px;">- Parotta Express</p>
+      </div>
+    `,
+  };
+
+  const ownerMail = STORE_OWNER_EMAIL
+    ? {
+        from,
+        to: STORE_OWNER_EMAIL,
+        subject: `Password reset requested for ${email}`,
+        text: `A password reset was requested for ${email}. Temp password: ${temporaryPassword}`,
+      }
+    : null;
+
+  if (ownerMail) await transporter.sendMail(ownerMail);
+  await transporter.sendMail(userMail);
+}
+
+module.exports = { sendOrderEmails, isEmailConfigured, sendContactEmail, sendPasswordResetEmail };

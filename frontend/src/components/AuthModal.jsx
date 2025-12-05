@@ -24,6 +24,8 @@ const AuthModal = ({ isOpen, onClose, onSuccess }) => {
   });
   const [errors, setErrors] = useState({});
   const [submitError, setSubmitError] = useState('');
+  const [forgotStatus, setForgotStatus] = useState('');
+  const [loadingForgot, setLoadingForgot] = useState(false);
 
   const validateLogin = () => {
     const newErrors = {};
@@ -55,6 +57,7 @@ const AuthModal = ({ isOpen, onClose, onSuccess }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitError('');
+    setForgotStatus('');
     const newErrors = isLogin ? validateLogin() : validateSignup();
     if (Object.keys(newErrors).length !== 0) {
       setErrors(newErrors);
@@ -105,10 +108,47 @@ const AuthModal = ({ isOpen, onClose, onSuccess }) => {
     }
   };
 
+  const handleForgot = () => {
+    setSubmitError('');
+    setForgotStatus('');
+    const identifier = formData.username.trim();
+    if (!identifier) {
+      setErrors((prev) => ({ ...prev, username: 'Username or email is required' }));
+      return;
+    }
+    const run = async () => {
+      const API_BASE = process.env.REACT_APP_API_BASE || '';
+      setLoadingForgot(true);
+      try {
+        const res = await fetch(`${API_BASE}/api/auth/forgot`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ identifier }),
+        });
+        if (res.ok) {
+          setForgotStatus('Temporary password sent to your email.');
+        } else {
+          const err = await res.json().catch(() => ({}));
+          setForgotStatus(
+            err.error === 'user_not_found'
+              ? 'Account not found or missing email.'
+              : 'Unable to send reset email. Please try again.'
+          );
+        }
+      } catch {
+        setForgotStatus('Network error. Please try again.');
+      } finally {
+        setLoadingForgot(false);
+      }
+    };
+    void run();
+  };
+
   const switchMode = () => {
     setIsLogin(!isLogin);
     setErrors({});
     setSubmitError('');
+    setForgotStatus('');
   };
 
   return (
@@ -132,13 +172,13 @@ const AuthModal = ({ isOpen, onClose, onSuccess }) => {
             {isLogin ? (
               <>
                 <div className="grid gap-2">
-                  <Label htmlFor="username">Username</Label>
+                  <Label htmlFor="username">Username or Email</Label>
                   <Input
                     id="username"
                     name="username"
                     value={formData.username}
                     onChange={handleChange}
-                    placeholder="Enter your username"
+                    placeholder="Enter your username or email"
                     data-testid="login-username-input"
                   />
                   {errors.username && <p className="text-sm text-red-500">{errors.username}</p>}
@@ -155,6 +195,17 @@ const AuthModal = ({ isOpen, onClose, onSuccess }) => {
                     data-testid="login-password-input"
                   />
                   {errors.password && <p className="text-sm text-red-500">{errors.password}</p>}
+                </div>
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    onClick={handleForgot}
+                    className="text-sm text-saffron-700 hover:underline"
+                    disabled={loadingForgot}
+                    data-testid="login-forgot-button"
+                  >
+                    {loadingForgot ? 'Sending reset...' : 'Forgot password?'}
+                  </button>
                 </div>
               </>
             ) : (
@@ -275,6 +326,11 @@ const AuthModal = ({ isOpen, onClose, onSuccess }) => {
             >
               {isLogin ? 'New user? Sign up' : 'Already have an account? Login'}
             </Button>
+            {isLogin && forgotStatus && (
+              <p className="text-sm text-gray-700 text-center" data-testid="forgot-status">
+                {forgotStatus}
+              </p>
+            )}
           </DialogFooter>
         </form>
       </DialogContent>

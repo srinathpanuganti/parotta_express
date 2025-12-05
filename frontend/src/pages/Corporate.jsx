@@ -198,7 +198,7 @@ const Corporate = () => {
         const data = await res.json();
         toast({
           title: 'Order placed',
-          description: `ID ${data.id} • Total $${Number(data.totalAmount).toFixed(2)}`,
+          description: `Order #${data.orderNumber || data.id} • Total $${Number(data.totalAmount).toFixed(2)}`,
           action: (
             <button onClick={() => setShowOrders(true)} className="underline text-sm">
               View

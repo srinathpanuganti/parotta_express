@@ -3,7 +3,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const { PrismaClient } = require('@prisma/client');
-const { sendOrderEmails, sendContactEmail } = require('./email');
+const { sendOrderEmails, sendContactEmail, sendPasswordResetEmail } = require('./email');
 let emailQueue = null;
 try {
   // Lazy require to allow server to run without Redis in dev
@@ -20,6 +20,7 @@ const SECRET = process.env.SESSION_SECRET || 'dev-secret-change-me';
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'http://localhost:3000';
 const ORDER_TIMEZONE = process.env.ORDER_TIMEZONE || 'America/Chicago';
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || '';
+const ORDER_SEQUENCE_KEY = 'order_sequence';
 
 // Prisma client
 const prisma = new PrismaClient();
@@ -114,6 +115,41 @@ function enableCORS(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE,OPTIONS');
 }
 
+function normalizeIdentifier(value) {
+  return String(value || '').trim();
+}
+
+async function findUserByIdentifier(identifier) {
+  const raw = normalizeIdentifier(identifier);
+  if (!raw) return null;
+  const lower = raw.toLowerCase();
+  let user = await prisma.user.findUnique({ where: { username: raw } }).catch(() => null);
+  if (!user && raw.includes('@')) {
+    user = await prisma.user.findUnique({ where: { email: raw } }).catch(() => null);
+  }
+  if (!user && lower !== raw) {
+    user = await prisma.user.findFirst({ where: { OR: [{ username: lower }, { email: lower }] } }).catch(() => null);
+  }
+  return user;
+}
+
+async function getNextOrderNumber() {
+  // Use a simple app config row as a counter to avoid race conditions
+  const seqKey = ORDER_SEQUENCE_KEY;
+  const updated = await prisma.$transaction(async (tx) => {
+    const existing = await tx.appConfig.findUnique({ where: { key: seqKey } });
+    const current = existing ? Number(existing.value || '0') : 0;
+    const next = current + 1;
+    await tx.appConfig.upsert({
+      where: { key: seqKey },
+      create: { key: seqKey, value: String(next) },
+      update: { value: String(next) },
+    });
+    return next;
+  });
+  return updated;
+}
+
 // Router helpers
 function matchRoute(method, urlPath, route) {
   if (method !== route.method) return null;
@@ -181,8 +217,10 @@ addRoute('POST', '/api/auth/signup', async (req, res) => {
   try {
     const body = await parseJSON(req);
     const { username, password, name, email, phone, address } = body || {};
-    if (!username || !password) return json(res, 400, { error: 'username and password required' });
-    const existing = await prisma.user.findUnique({ where: { username } });
+    const normalizedUsername = normalizeIdentifier(username).toLowerCase();
+    const normalizedEmail = email ? normalizeIdentifier(email).toLowerCase() : null;
+    if (!normalizedUsername || !password) return json(res, 400, { error: 'username and password required' });
+    const existing = await prisma.user.findUnique({ where: { username: normalizedUsername } });
     if (existing) return json(res, 409, { error: 'username already exists' });
     const id = crypto.randomUUID();
     const salt = crypto.randomBytes(8).toString('hex');
@@ -191,11 +229,11 @@ addRoute('POST', '/api/auth/signup', async (req, res) => {
       await prisma.user.create({
         data: {
           id,
-          username,
+          username: normalizedUsername,
           passwordHash,
           salt,
           name: name || null,
-          email: email || null,
+          email: normalizedEmail || null,
           phone: phone || null,
           address: address || null,
           role: 'corporate',
@@ -207,9 +245,9 @@ addRoute('POST', '/api/auth/signup', async (req, res) => {
       }
       throw e;
     }
-    const token = signToken({ sub: id, username });
+    const token = signToken({ sub: id, username: normalizedUsername });
     setCookie(res, SESSION_COOKIE, token, { httpOnly: true, sameSite: 'Lax', path: '/' });
-    return json(res, 201, { id, username, name, email, phone, address });
+    return json(res, 201, { id, username: normalizedUsername, name, email: normalizedEmail, phone, address });
   } catch (e) {
     return json(res, 400, { error: 'invalid request' });
   }
@@ -218,14 +256,35 @@ addRoute('POST', '/api/auth/signup', async (req, res) => {
 addRoute('POST', '/api/auth/login', async (req, res) => {
   try {
     const body = await parseJSON(req);
-    const { username, password } = body || {};
-    const user = await prisma.user.findUnique({ where: { username } });
+    const { username, password, email } = body || {};
+    const identifier = normalizeIdentifier(username || email);
+    const user = await findUserByIdentifier(identifier);
     if (!user) return json(res, 401, { error: 'invalid credentials' });
     const hash = hashPassword(password, user.salt);
     if (hash !== user.passwordHash) return json(res, 401, { error: 'invalid credentials' });
-    const token = signToken({ sub: user.id, username });
+    const token = signToken({ sub: user.id, username: user.username });
     setCookie(res, SESSION_COOKIE, token, { httpOnly: true, sameSite: 'Lax', path: '/' });
     return json(res, 200, { id: user.id, username: user.username, name: user.name, email: user.email, phone: user.phone, address: user.address });
+  } catch (e) {
+    return json(res, 400, { error: 'invalid request' });
+  }
+});
+
+// Forgot password: generate temp password and email it
+addRoute('POST', '/api/auth/forgot', async (req, res) => {
+  try {
+    const body = await parseJSON(req);
+    const { identifier } = body || {};
+    const normalized = normalizeIdentifier(identifier);
+    if (!normalized) return json(res, 400, { error: 'identifier required' });
+    const user = await findUserByIdentifier(normalized);
+    if (!user || !user.email) return json(res, 404, { error: 'user_not_found' });
+    const tempPassword = crypto.randomBytes(8).toString('base64url').slice(0, 12);
+    const newSalt = crypto.randomBytes(8).toString('hex');
+    const newHash = hashPassword(tempPassword, newSalt);
+    await prisma.user.update({ where: { id: user.id }, data: { salt: newSalt, passwordHash: newHash } });
+    await sendPasswordResetEmail({ email: user.email, name: user.name || user.username, temporaryPassword: tempPassword });
+    return json(res, 200, { ok: true });
   } catch (e) {
     return json(res, 400, { error: 'invalid request' });
   }
@@ -389,8 +448,11 @@ addRoute('POST', '/api/corporate/orders', async (req, res) => {
       total += price * qty;
       createItems.push({ itemId: base.id, nameSnapshot: base.name, priceSnapshot: price, quantity: qty });
     }
+    const nextOrderNumber = await getNextOrderNumber();
     const created = await prisma.order.create({
       data: {
+        id: crypto.randomUUID(),
+        orderNumber: nextOrderNumber,
         userId: user.id,
         status: 'placed',
         totalAmount: Number(total.toFixed(2)),
@@ -401,7 +463,7 @@ addRoute('POST', '/api/corporate/orders', async (req, res) => {
       },
     });
     // Respond immediately
-    json(res, 201, { id: created.id, status: created.status, totalAmount: created.totalAmount });
+    json(res, 201, { id: created.id, orderNumber: created.orderNumber, status: created.status, totalAmount: created.totalAmount });
     // Queue email job if queue available; else send directly (non-blocking)
     if (emailQueue) {
       emailQueue.add('sendOrderEmail', { order: created, user, items: createItems }).catch((err) => {

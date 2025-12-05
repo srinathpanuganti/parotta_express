@@ -41,6 +41,7 @@ model Order {
   userId          String
   user            User        @relation(fields: [userId], references: [id])
   status          String
+  orderNumber     Int         @unique
   totalAmount     Float
   notes           String?
   scheduledAt     DateTime?
