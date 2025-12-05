@@ -1,0 +1,15 @@
+# Node dependencies
+node_modules
+
+# Environment and build artifacts
+.env
+coverage
+build
+
+# VCS metadata
+.git
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*

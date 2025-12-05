@@ -1,0 +1,57 @@
+{
+  "categories": [
+    {
+      "id": "biriyani-combo-12oz",
+      "name": "Biriyani Combo (12 oz Rice, Raita)",
+      "items": [
+        {"id": "cc1", "name": "Veg Biriyani + Gobi 65", "price": 9.99},
+        {"id": "cc2", "name": "Chicken Biriyani + Chicken 65", "price": 9.99},
+        {"id": "cc3", "name": "Mutton Biriyani + Chicken 65", "price": 11.99}
+      ]
+    },
+    {
+      "id": "biriyani-24oz",
+      "name": "Biriyani (24 oz, Raita)",
+      "items": [
+        {"id": "c24-1", "name": "Veg Biriyani", "price": 10.99},
+        {"id": "c24-2", "name": "Chicken Biriyani", "price": 11.99},
+        {"id": "c24-3", "name": "Mutton Biriyani", "price": 13.99}
+      ]
+    },
+    {
+      "id": "parottas",
+      "name": "Parottas",
+      "items": [
+        {"id": "cp1", "name": "Parottas (2 pcs + Veg Salna)", "price": 10.99},
+        {"id": "cp2", "name": "Parottas (2 pcs + Chicken Salna)", "price": 10.99},
+        {"id": "cp3", "name": "Parottas (2 pcs + Mutton Salna)", "price": 12.99}
+      ]
+    },
+    {
+      "id": "fried-rice",
+      "name": "Fried Rice - $10.00",
+      "items": [
+        {"id": "cfr1", "name": "Veg Fried Rice", "price": 10.00},
+        {"id": "cfr2", "name": "Egg Fried Rice", "price": 10.00},
+        {"id": "cfr3", "name": "Chicken Fried Rice", "price": 10.00}
+      ]
+    },
+    {
+      "id": "meal-pack-1",
+      "name": "Meal Pack #1 - $9.99",
+      "description": "White rice (12 oz), Sambar (8 oz), Poriyal (4 oz), Rasam (4 oz), Papad",
+      "items": [
+        {"id": "cm1", "name": "Meal Pack #1", "price": 9.99}
+      ]
+    },
+    {
+      "id": "meal-pack-2",
+      "name": "Meal Pack #2 - $9.99",
+      "description": "White rice (12 oz), Vathakozhambu (4 oz), Poriyal (4 oz), Rasam (4 oz), Papad",
+      "items": [
+        {"id": "cm2", "name": "Meal Pack #2", "price": 9.99}
+      ]
+    }
+  ]
+}
+

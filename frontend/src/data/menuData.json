@@ -1,0 +1,159 @@
+{
+  "categories": [
+    {
+      "id": "breakfast",
+      "name": "Breakfast Menu",
+      "description": "Start your day with authentic South Indian breakfast",
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "items": [
+        {"id": "b1", "name": "Idli", "description": "(3) Sambar/Chutney", "price": 6.99},
+        {"id": "b2", "name": "Sambar Idli", "description": "(2)", "price": 7.99},
+        {"id": "b3", "name": "Pongal", "description": "Sambar/Chutney", "price": 6.99},
+        {"id": "b4", "name": "Medu Vada", "description": "(3) Sambar/Chutney", "price": 6.49},
+        {"id": "b5", "name": "Poori", "description": "(2) Potato masala/Chutney", "price": 8.99},
+        {"id": "b6", "name": "Combo-1: Idly & Vada", "description": "2 idlis + 1 Medu vada + Sambar + Chutneys", "price": 7.99},
+        {"id": "b7", "name": "Combo-2: Pongal & Vada", "description": "1 Cup Pongal + 1 Medu vada + Sambar + Chutneys", "price": 8.49},
+        {"id": "b8", "name": "Combo-3: Poori Vada", "description": "2 Pooris + Potato Masala + 1 Medu Vada + Sambar", "price": 10.49},
+        {"id": "b9", "name": "Combo-4: Full South Breakfast", "description": "1 Idli + 1 vada + 1 poori + pongal + Sambar + Chutneys", "price": 10.99}
+      ]
+    },
+    {
+      "id": "dosa",
+      "name": "Dosa Menu",
+      "description": "Crispy, golden dosas made to perfection",
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "items": [
+        {"id": "d1", "name": "Plain Dosa", "description": "with Sambar & chutney", "price": 8.99},
+        {"id": "d2", "name": "Egg Dosa", "description": "with Sambar & chutney", "price": 10.99},
+        {"id": "d3", "name": "Masala Dosa", "description": "with Sambar & chutney", "price": 11.99},
+        {"id": "d4", "name": "Onion Dosa", "description": "with Sambar & chutney", "price": 10.99},
+        {"id": "d5", "name": "Kal Dosa", "description": "with Sambar & chutney", "price": 8.99},
+        {"id": "d6", "name": "Kal Dosa with Chicken Curry", "description": "Traditional style", "price": 11.00},
+        {"id": "d7", "name": "Kal Dosa with Mutton Curry", "description": "Traditional style", "price": 13.00},
+        {"id": "d8", "name": "Kal Dosa (2) with Fish Curry", "description": "Coastal delight", "price": 12.00},
+        {"id": "d9", "name": "Chicken Curry Dosa", "description": "Stuffed with chicken", "price": 13.00},
+        {"id": "d10", "name": "Mutton Curry Dosa", "description": "Stuffed with mutton", "price": 15.00}
+      ]
+    },
+    {
+      "id": "biryani",
+      "name": "Dhum Biriyani",
+      "description": "Aromatic biryani cooked in traditional dum style",
+      "image": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxiaXJ5YW5pfGVufDB8fHx8MTc2MDY5MTA2NXww&ixlib=rb-4.1.0&q=85",
+      "items": [
+        {"id": "br1", "name": "Chef Special Veg Biriyani", "description": "With Salna, Ennai kathrikai and raita (Seeragasamba)", "price": 13.99},
+        {"id": "br2", "name": "Chicken Thalapakatti", "description": "With Salna, Ennai kathrikai and raita (Seeragasamba)", "price": 14.99},
+        {"id": "br3", "name": "Dindugal Mutton Biriyani", "description": "With Salna, Ennai kathrikai and raita (Seeragasamba)", "price": 16.99}
+      ]
+    },
+    {
+      "id": "parotta",
+      "name": "Parotta",
+      "description": "Our signature layered flatbread with your choice of curry",
+      "image": "https://images.pexels.com/photos/9609857/pexels-photo-9609857.jpeg",
+      "items": [
+        {"id": "p1", "name": "Parotta with Veg Salna", "description": "(2 PC's)", "price": 9.99},
+        {"id": "p2", "name": "Parotta with Egg Salna", "description": "(2 PC's)", "price": 9.99},
+        {"id": "p3", "name": "Parotta with Chicken Salna", "description": "(2 PC's)", "price": 12.99},
+        {"id": "p4", "name": "Parotta with Mutton Salna", "description": "(2 PC's)", "price": 14.49},
+        {"id": "p5", "name": "Ceylon Veechu with Veg Salna", "description": "(1 PC)", "price": 10.99},
+        {"id": "p6", "name": "Ceylon Veechu with Chicken Salna", "description": "(1 PC)", "price": 11.99},
+        {"id": "p7", "name": "Ceylon Veechu with Mutton Salna", "description": "(1 PC)", "price": 13.49}
+      ]
+    },
+    {
+      "id": "kothu",
+      "name": "Kothu Parotta",
+      "description": "Shredded parotta tossed with spices and your choice of protein",
+      "image": "https://images.pexels.com/photos/23913881/pexels-photo-23913881.jpeg",
+      "items": [
+        {"id": "k1", "name": "Veg Kothu Parotta", "description": "Mixed vegetables", "price": 10.99},
+        {"id": "k2", "name": "Paneer Kothu Parotta", "description": "With cottage cheese", "price": 11.99},
+        {"id": "k3", "name": "Egg Kothu Parotta", "description": "With scrambled eggs", "price": 11.99},
+        {"id": "k4", "name": "Chicken Kothu Parotta", "description": "With chicken", "price": 12.99},
+        {"id": "k5", "name": "Mutton Kothu Parotta", "description": "With tender mutton", "price": 15.49}
+      ]
+    },
+    {
+      "id": "thali",
+      "name": "Thalis",
+      "description": "Complete meals with rice, curries, and accompaniments",
+      "image": "https://images.unsplash.com/photo-1657196118354-f25f29fe636d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "items": [
+        {"id": "t1", "name": "Veg Thali", "description": "Steamed Rice + Paruppu Podi + Roti Pachadi + Mango Thokku + Sambar + Vatha Kozhambu + Rasam + Kootu + Poriyal + Parotta (1 pc) + Gobi 65 (Small Portion) + Appalam/Fryums + Pickle + Gulab Jamun + Curd or Butter Milk", "price": 14.99},
+        {"id": "t2", "name": "Non-veg Thali", "description": "Steamed Rice + Paruppu Podi + Chicken Curry + Fish Curry + Mutton Curry + Sambar + Rasam + Poriyal + Parotta (1 pc) + Chicken 65 (Small Portion) + Appalam/Fryums + Pickle + Gulab Jamun + Curd or Butter Milk", "price": 16.99}
+      ]
+    },
+    {
+      "id": "curries",
+      "name": "Curries",
+      "description": "Rich and flavorful curries",
+      "image": "https://images.unsplash.com/photo-1586981114766-708f09a71e20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwYXJvdHRhJTIwY3Vycnl8ZW58MHx8fHwxNzYwNjkyNzA5fDA&ixlib=rb-4.1.0&q=85",
+      "items": [
+        {"id": "c1", "name": "Paneer Butter Masala", "description": "Creamy cottage cheese curry", "price": 12.99},
+        {"id": "c2", "name": "Egg Masala", "description": "Boiled eggs in spicy gravy", "price": 9.99},
+        {"id": "c3", "name": "Butter Chicken", "description": "Creamy tomato-based chicken curry", "price": 12.99},
+        {"id": "c4", "name": "Chicken Salna", "description": "Traditional South Indian chicken curry", "price": 10.99},
+        {"id": "c5", "name": "Chennai Chicken Curry", "description": "Authentic Chennai style", "price": 13.00},
+        {"id": "c6", "name": "Mutton Curry", "description": "Slow-cooked mutton curry", "price": 15.00},
+        {"id": "c7", "name": "Fish Curry", "description": "Coastal style fish curry", "price": 14.00},
+        {"id": "c8", "name": "Railway Mutton Curry", "description": "Legendary railway recipe", "price": 16.49}
+      ]
+    },
+    {
+      "id": "alacarte",
+      "name": "A la Carte",
+      "description": "Appetizers and side dishes",
+      "image": "https://images.unsplash.com/photo-1683533678059-63c6a0e9e3ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "items": [
+        {"id": "a1", "name": "Gobi 65", "description": "Crispy cauliflower", "price": 9.99},
+        {"id": "a2", "name": "Chicken 65", "description": "Spicy fried chicken", "price": 10.99},
+        {"id": "a3", "name": "Chicken Lollipop", "description": "Drummettes in spicy coating", "price": 10.99},
+        {"id": "a4", "name": "Chicken Pepper Fry", "description": "Dry pepper chicken", "price": 13.00},
+        {"id": "a5", "name": "Mutton Chukka", "description": "Dry mutton fry", "price": 17.49},
+        {"id": "a6", "name": "Paneer Manchurian", "description": "Indo-Chinese cottage cheese", "price": 13.00}
+      ]
+    },
+    {
+      "id": "snacks",
+      "name": "Snacks Menu",
+      "description": "Tea-time favorites",
+      "image": "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg",
+      "items": [
+        {"id": "s1", "name": "Masala Tea", "description": "Traditional Indian chai", "price": 2.00},
+        {"id": "s2", "name": "Aalu Samosa", "description": "Potato-filled pastry", "price": 2.99},
+        {"id": "s3", "name": "Veg Puffs", "description": "Vegetable stuffed puff", "price": 3.49},
+        {"id": "s4", "name": "Egg Puffs", "description": "Egg stuffed puff", "price": 3.99},
+        {"id": "s5", "name": "Chicken Puffs", "description": "Chicken stuffed puff", "price": 4.49},
+        {"id": "s6", "name": "Potato Bajji with Chutney", "description": "Potato fritters", "price": 3.49},
+        {"id": "s7", "name": "Onion Bajji with Chutney", "description": "Onion fritters", "price": 3.49}
+      ]
+    }
+  ],
+  "featured": [
+    {
+      "id": "featured1",
+      "name": "Chicken Thalapakatti Biriyani",
+      "description": "Our signature biryani cooked in traditional dum style with aromatic Seeragasamba rice, served with Salna, Ennai kathrikai and raita",
+      "price": 14.99,
+      "image": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxiaXJ5YW5pfGVufDB8fHx8MTc2MDY5MTA2NXww&ixlib=rb-4.1.0&q=85",
+      "category": "Dhum Biriyani"
+    },
+    {
+      "id": "featured2",
+      "name": "Parotta with Chicken Salna",
+      "description": "Our famous layered flatbread served with aromatic chicken curry, a customer favorite",
+      "price": 12.99,
+      "image": "https://images.pexels.com/photos/23913881/pexels-photo-23913881.jpeg",
+      "category": "Parotta"
+    },
+    {
+      "id": "featured3",
+      "name": "Masala Dosa",
+      "description": "Crispy golden dosa filled with spiced potato masala, served with sambar and chutney",
+      "price": 11.99,
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "category": "Dosa Menu"
+    }
+  ]
+}

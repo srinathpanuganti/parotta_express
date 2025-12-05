@@ -1,0 +1,61 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      SESSION_SECRET: ${SESSION_SECRET}
+      ADMIN_TOKEN: ${ADMIN_TOKEN}
+      ALLOWED_ORIGIN: https://${DOMAIN}
+      ORDER_TIMEZONE: ${ORDER_TIMEZONE}
+      PORT: 5000
+      GMAIL_USER: ${GMAIL_USER}
+      GMAIL_PASS: ${GMAIL_PASS}
+      STORE_OWNER_EMAIL: ${STORE_OWNER_EMAIL}
+      MAIL_FROM: ${MAIL_FROM}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DATABASE_URL: file:/data/dev.db
+    ports:
+      - "5000:5000"
+    volumes:
+      - backend_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/healthz"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  worker:
+    build:
+      context: ./backend
+    command: node worker.js
+    environment:
+      SESSION_SECRET: ${SESSION_SECRET}
+      GMAIL_USER: ${GMAIL_USER}
+      GMAIL_PASS: ${GMAIL_PASS}
+      STORE_OWNER_EMAIL: ${STORE_OWNER_EMAIL}
+      MAIL_FROM: ${MAIL_FROM}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DATABASE_URL: file:/data/dev.db
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend_data:
+
