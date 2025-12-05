@@ -12,6 +12,7 @@ backend/node_modules
 frontend/build
 backend/build
 backend/coverage
+backend/prisma/*.db*
 
 # Misc
 .DS_Store
