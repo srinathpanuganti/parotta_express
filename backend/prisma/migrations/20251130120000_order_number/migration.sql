@@ -1,5 +1,5 @@
--- Add sequential orderNumber with unique index
-ALTER TABLE "Order" ADD COLUMN "orderNumber" INTEGER;
+-- Add sequential orderNumber with unique index (idempotent for SQLite 3.35+)
+ALTER TABLE "Order" ADD COLUMN IF NOT EXISTS "orderNumber" INTEGER;
 
 -- initialize existing rows with a sequence based on createdAt, falling back to rowid
 WITH ordered AS (
@@ -11,6 +11,5 @@ SET "orderNumber" = ordered.seq
 FROM ordered
 WHERE ordered.id = o.id;
 
--- enforce uniqueness and non-null constraint going forward
-CREATE UNIQUE INDEX "Order_orderNumber_key" ON "Order"("orderNumber");
-ALTER TABLE "Order" ALTER COLUMN "orderNumber" SET NOT NULL;
+-- enforce uniqueness (non-null enforced at app layer)
+CREATE UNIQUE INDEX IF NOT EXISTS "Order_orderNumber_key" ON "Order"("orderNumber");
