@@ -33,9 +33,9 @@ const Home = () => {
                 Experience authentic South Indian flavors with our homemade delights. From crispy dosas to aromatic biryanis, we bring you the taste of home.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={scrollToMenu} 
-                  size="lg" 
+                <Button
+                  onClick={scrollToMenu}
+                  size="lg"
                   className="text-lg"
                   data-testid="view-menu-button"
                 >
@@ -43,9 +43,9 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <a href="tel:+19455460010">
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
+                  <Button
+                    variant="outline"
+                    size="lg"
                     className="text-lg"
                     data-testid="order-now-button"
                   >
@@ -192,9 +192,9 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+19455460010">
-                <Button 
-                  size="lg" 
-                  variant="default" 
+                <Button
+                  size="lg"
+                  variant="default"
                   className="text-lg bg-saffron-500 hover:bg-saffron-600"
                   data-testid="cta-call-button"
                 >
@@ -202,9 +202,9 @@ const Home = () => {
                 </Button>
               </a>
               <a href="/contact">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
+                <Button
+                  size="lg"
+                  variant="outline"
                   className="text-lg text-white border-white hover:bg-white hover:text-maroon-900"
                   data-testid="cta-contact-button"
                 >

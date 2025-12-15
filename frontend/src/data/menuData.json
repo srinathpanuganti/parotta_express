@@ -1,132 +1,1223 @@
 {
   "categories": [
     {
-      "id": "breakfast",
-      "name": "Breakfast Menu",
-      "description": "Start your day with authentic South Indian breakfast",
-      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "id": "appetizers_veg",
+      "name": "Appetizers (Veg - Dry)",
+      "description": "Vegetarian starters and dry appetizers",
+      "image": "https://images.unsplash.com/photo-1683533678059-63c6a0e9e3ef",
       "items": [
-        {"id": "b1", "name": "Idli", "description": "(3) Sambar/Chutney", "price": 6.99},
-        {"id": "b2", "name": "Sambar Idli", "description": "(2)", "price": 7.99},
-        {"id": "b3", "name": "Pongal", "description": "Sambar/Chutney", "price": 6.99},
-        {"id": "b4", "name": "Medu Vada", "description": "(3) Sambar/Chutney", "price": 6.49},
-        {"id": "b5", "name": "Poori", "description": "(2) Potato masala/Chutney", "price": 8.99},
-        {"id": "b6", "name": "Combo-1: Idly & Vada", "description": "2 idlis + 1 Medu vada + Sambar + Chutneys", "price": 7.99},
-        {"id": "b7", "name": "Combo-2: Pongal & Vada", "description": "1 Cup Pongal + 1 Medu vada + Sambar + Chutneys", "price": 8.49},
-        {"id": "b8", "name": "Combo-3: Poori Vada", "description": "2 Pooris + Potato Masala + 1 Medu Vada + Sambar", "price": 10.49},
-        {"id": "b9", "name": "Combo-4: Full South Breakfast", "description": "1 Idli + 1 vada + 1 poori + pongal + Sambar + Chutneys", "price": 10.99}
+        {
+          "id": "av1",
+          "name": "Gobi 65",
+          "description": "Crispy cauliflower",
+          "price": 10.99
+        },
+        {
+          "id": "av2",
+          "name": "Gobi Manchurian",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "av3",
+          "name": "Mushroom 65",
+          "description": "",
+          "price": 10.99
+        },
+        {
+          "id": "av4",
+          "name": "Chilli Mushroom",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "av5",
+          "name": "Mushroom Pepper Fry",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "av6",
+          "name": "Baby Corn Pepper Fry",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "av7",
+          "name": "Baby Corn Manchurian",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "av8",
+          "name": "Paneer 65",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "av9",
+          "name": "Paneer Manchurian",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "av10",
+          "name": "Crispy Corn",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "av11",
+          "name": "Meal Maker Chukka",
+          "description": "",
+          "price": 13.99
+        }
+      ]
+    },
+    {
+      "id": "appetizers_nonveg",
+      "name": "Appetizers (Non-Veg - Dry)",
+      "description": "Non-vegetarian starters and dry appetizers",
+      "image": "https://images.unsplash.com/photo-1683533678059-63c6a0e9e3ef",
+      "items": [
+        {
+          "id": "an1",
+          "name": "Chicken 65",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "an2",
+          "name": "Chicken Lollipop",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "an3",
+          "name": "Chicken Chukka Varuval",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "an4",
+          "name": "Chicken Pepper Fry",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "an5",
+          "name": "Chilli Chicken",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "an6",
+          "name": "Maharani Chicken",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "an7",
+          "name": "Karuvepillai Chicken",
+          "description": "",
+          "price": 14.49
+        },
+        {
+          "id": "an8",
+          "name": "Pallipalayam Chicken",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "an9",
+          "name": "Mutton Chukka",
+          "description": "",
+          "price": 17.99
+        },
+        {
+          "id": "an10",
+          "name": "Mutton Liver Varuval",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "an11",
+          "name": "Mutton Botti Fry",
+          "description": "",
+          "price": 17.99
+        },
+        {
+          "id": "an12",
+          "name": "Nethili Fry",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "an13",
+          "name": "Vanjram Fry",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "an14",
+          "name": "Pomfret Whole Fry",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "an15",
+          "name": "Shrimp Thokku",
+          "description": "",
+          "price": 16.99
+        }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "Soups",
+      "description": "Comforting soups",
+      "image": "",
+      "items": [
+        {
+          "id": "soup1",
+          "name": "Mutton Bone Soup",
+          "description": "",
+          "price": 8.99
+        },
+        {
+          "id": "soup2",
+          "name": "Pepper Rasam",
+          "description": "",
+          "price": 3.50
+        }
+      ]
+    },
+    {
+      "id": "tiffin",
+      "name": "Tiffin (Breakfast)",
+      "description": "Weekday & weekend tiffin items — breakfast style (Idli, Pongal, Vada etc.)",
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976",
+      "items": [
+        {
+          "id": "t1",
+          "name": "Idli (3) Sambar/Chutney",
+          "description": "",
+          "price": 7.99
+        },
+        {
+          "id": "t2",
+          "name": "Sambar Idli (2)",
+          "description": "",
+          "price": 8.99
+        },
+        {
+          "id": "t3",
+          "name": "Pongal / Sambar / Chutney",
+          "description": "",
+          "price": 7.99
+        },
+        {
+          "id": "t4",
+          "name": "Medu Vada (3) Sambar/Chutney",
+          "description": "",
+          "price": 7.49
+        },
+        {
+          "id": "t5",
+          "name": "Poori (2) Potato Masala / Chutney",
+          "description": "",
+          "price": 9.99
+        },
+        {
+          "id": "t6",
+          "name": "Combo 1: Idly - Vada (2 Idlis + 1 Medu Vada + Sambar + Chutneys)",
+          "description": "",
+          "price": 8.99
+        },
+        {
+          "id": "t7",
+          "name": "Combo 2: Pongal - Vada (1 Cup Pongal + 1 Medu Vada + Sambar + Chutneys) - Available only on weekend",
+          "description": "",
+          "price": 9.49
+        },
+        {
+          "id": "t8",
+          "name": "Combo 3: Poori - Vada (2 Pooris + Potato Masala + 1 Medu Vada + Sambar)",
+          "description": "",
+          "price": 11.49
+        },
+        {
+          "id": "t9",
+          "name": "Combo 4: Full South Breakfast (1 Idli + 1 Vada + 1 Poori + Mini Dosa + Sambar + Chutneys)",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "t10",
+          "name": "Add-on: Extra Vada",
+          "description": "",
+          "price": 1.99
+        },
+        {
+          "id": "t11",
+          "name": "Add-on: Extra Idly",
+          "description": "",
+          "price": 1.49
+        },
+        {
+          "id": "t12",
+          "name": "Add-on: Extra Poori",
+          "description": "",
+          "price": 1.99
+        },
+        {
+          "id": "t13",
+          "name": "Add-on: Extra Pongal (Cup)",
+          "description": "",
+          "price": 3.99
+        },
+        {
+          "id": "t14",
+          "name": "Add-on: Extra Sambar",
+          "description": "",
+          "price": 2.99
+        }
       ]
     },
     {
       "id": "dosa",
-      "name": "Dosa Menu",
-      "description": "Crispy, golden dosas made to perfection",
-      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "name": "Dosa",
+      "description": "Crispy dosas served with sambar & chutney",
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976",
       "items": [
-        {"id": "d1", "name": "Plain Dosa", "description": "with Sambar & chutney", "price": 8.99},
-        {"id": "d2", "name": "Egg Dosa", "description": "with Sambar & chutney", "price": 10.99},
-        {"id": "d3", "name": "Masala Dosa", "description": "with Sambar & chutney", "price": 11.99},
-        {"id": "d4", "name": "Onion Dosa", "description": "with Sambar & chutney", "price": 10.99},
-        {"id": "d5", "name": "Kal Dosa", "description": "with Sambar & chutney", "price": 8.99},
-        {"id": "d6", "name": "Kal Dosa with Chicken Curry", "description": "Traditional style", "price": 11.00},
-        {"id": "d7", "name": "Kal Dosa with Mutton Curry", "description": "Traditional style", "price": 13.00},
-        {"id": "d8", "name": "Kal Dosa (2) with Fish Curry", "description": "Coastal delight", "price": 12.00},
-        {"id": "d9", "name": "Chicken Curry Dosa", "description": "Stuffed with chicken", "price": 13.00},
-        {"id": "d10", "name": "Mutton Curry Dosa", "description": "Stuffed with mutton", "price": 15.00}
+        {
+          "id": "d1",
+          "name": "Plain Dosa with Sambar & chutney",
+          "description": "",
+          "price": 9.99
+        },
+        {
+          "id": "d2",
+          "name": "Egg Dosa with Sambar & chutney",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "d3",
+          "name": "Masala Dosa with Sambar & chutney",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "d4",
+          "name": "Onion Dos a with Sambar & chutney",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "d5",
+          "name": "Kal Dosa with Sambar & chutney",
+          "description": "",
+          "price": 9.99
+        },
+        {
+          "id": "d6",
+          "name": "Kal Dosa with Chicken curry / Salna",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "d7",
+          "name": "Kal Dosa with Mutton curry / Salna",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "d8",
+          "name": "Kal Dosa (2) with Fish curry",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "d9",
+          "name": "Kal Dosa with Boti curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "d10",
+          "name": "Chicken Curry Dosa",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "d11",
+          "name": "Mutton Curry Dosa",
+          "description": "",
+          "price": 16.99
+        }
       ]
     },
     {
-      "id": "biryani",
-      "name": "Dhum Biriyani",
-      "description": "Aromatic biryani cooked in traditional dum style",
-      "image": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxiaXJ5YW5pfGVufDB8fHx8MTc2MDY5MTA2NXww&ixlib=rb-4.1.0&q=85",
+      "id": "aapam",
+      "name": "Aapam",
+      "description": "Appam & specialty aapams",
+      "image": "",
       "items": [
-        {"id": "br1", "name": "Chef Special Veg Biriyani", "description": "With Salna, Ennai kathrikai and raita (Seeragasamba)", "price": 13.99},
-        {"id": "br2", "name": "Chicken Thalapakatti", "description": "With Salna, Ennai kathrikai and raita (Seeragasamba)", "price": 14.99},
-        {"id": "br3", "name": "Dindugal Mutton Biriyani", "description": "With Salna, Ennai kathrikai and raita (Seeragasamba)", "price": 16.99}
+        {
+          "id": "aa1",
+          "name": "Plain Aapam",
+          "description": "",
+          "price": 12.00
+        },
+        {
+          "id": "aa2",
+          "name": "With Coconut milk / Veg Salna / Egg Salna (2 PC's)",
+          "description": "",
+          "price": 13.00
+        },
+        {
+          "id": "aa3",
+          "name": "Paneer Kheema Appam (With Coconut milk / Veg Salna) (2 PC's)",
+          "description": "",
+          "price": 13.00
+        },
+        {
+          "id": "aa4",
+          "name": "Appam with Chicken salna (2 PC's)",
+          "description": "",
+          "price": 13.00
+        },
+        {
+          "id": "aa5",
+          "name": "Appam with Mutton salna (2 PC's)",
+          "description": "",
+          "price": 15.49
+        },
+        {
+          "id": "aa6",
+          "name": "Chicken Kheema Appam with chicken salna (2 PC's)",
+          "description": "",
+          "price": 13.00
+        },
+        {
+          "id": "aa7",
+          "name": "Mutton Kheema Appam with mutton salna (2 PC's)",
+          "description": "",
+          "price": 15.49
+        },
+        {
+          "id": "aa8",
+          "name": "Egg Appam with plain salna",
+          "description": "",
+          "price": 14.00
+        },
+        {
+          "id": "aa9",
+          "name": "Idiyappam with Coconut milk",
+          "description": "",
+          "price": 10.99
+        },
+        {
+          "id": "aa10",
+          "name": "Idiyappam with mutton paya (only on weekends)",
+          "description": "",
+          "price": 15.99
+        }
+      ]
+    },
+    {
+      "id": "curries_veg",
+      "name": "Curries (Veg) - served with 2pcs Parotta / Chapathi / Rice",
+      "description": "Vegetarian curries served with 2pcs parotta/chapathi or rice",
+      "image": "https://images.unsplash.com/photo-1586981114766-708f09a71e20",
+      "items": [
+        {
+          "id": "cv1",
+          "name": "Chettinadu Paneer Curry",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cv2",
+          "name": "Paneer Butter Masala",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cv3",
+          "name": "Paneer Tikka Masala",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cv4",
+          "name": "Kadai Paneer Curry",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cv5",
+          "name": "Ginger Paneer Curry",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cv6",
+          "name": "Garlic Paneer Curry",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cv7",
+          "name": "Andhra Paneer Curry",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cv8",
+          "name": "Kadai Aloo Gobi Mutter Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cv9",
+          "name": "Ginger Aloo Gobi Mutter Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cv10",
+          "name": "Garlic Aloo Gobi Mutter Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cv11",
+          "name": "Andhra Aloo Gobi Mutter",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cv12",
+          "name": "Chettinadu Aloo Gobi Mutter Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cv13",
+          "name": "Mushroom Masala",
+          "description": "",
+          "price": 13.99
+        }
+      ]
+    },
+    {
+      "id": "curries_nonveg",
+      "name": "Curries (Non-Veg) - served with 2pcs Parotta / Chapathi / Rice",
+      "description": "Non-veg curries served with 2pcs parotta/chapathi or rice",
+      "image": "https://images.unsplash.com/photo-1586981114766-708f09a71e20",
+      "items": [
+        {
+          "id": "cn1",
+          "name": "Egg Masala",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "cn2",
+          "name": "Chettinadu Egg Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cn3",
+          "name": "Kadai Egg Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cn4",
+          "name": "Ginger Egg Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cn5",
+          "name": "Garlic Egg Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cn6",
+          "name": "Andhra Egg Curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "cn7",
+          "name": "Kadai Chicken Curry",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "cn8",
+          "name": "Butter Chicken",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cn9",
+          "name": "Chicken Tikka Masala",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cn10",
+          "name": "Chettinadu Chicken Curry",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "cn11",
+          "name": "Ginger Chicken Curry",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "cn12",
+          "name": "Garlic Chicken Curry",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "cn13",
+          "name": "Andhra Chicken Curry",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "cn14",
+          "name": "Karuvepillai Chicken Curry",
+          "description": "",
+          "price": 16.99
+        },
+        {
+          "id": "cn15",
+          "name": "Chettinadu Mutton Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn16",
+          "name": "Kadai Mutton Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn17",
+          "name": "Garlic Mutton Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn18",
+          "name": "Andhra Mutton Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn19",
+          "name": "Karuvepillai Mutton Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn20",
+          "name": "Ginger Mutton Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn21",
+          "name": "Mutton Roast Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn22",
+          "name": "Railway Mutton Curry",
+          "description": "",
+          "price": 18.49
+        },
+        {
+          "id": "cn23",
+          "name": "Andhra Shrimp Curry",
+          "description": "",
+          "price": 17.99
+        },
+        {
+          "id": "cn24",
+          "name": "Kadai Shrimp Curry",
+          "description": "",
+          "price": 17.99
+        },
+        {
+          "id": "cn25",
+          "name": "Garlic Shrimp Curry",
+          "description": "",
+          "price": 17.99
+        },
+        {
+          "id": "cn26",
+          "name": "Ginger Shrimp Curry",
+          "description": "",
+          "price": 17.99
+        },
+        {
+          "id": "cn27",
+          "name": "Chettinadu Shrimp Curry",
+          "description": "",
+          "price": 17.99
+        },
+        {
+          "id": "cn28",
+          "name": "Boti Curry",
+          "description": "",
+          "price": 18.99
+        },
+        {
+          "id": "cn29",
+          "name": "Fish curry (only with rice)",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "cn30",
+          "name": "Karuvatu Kuzhambhu (Dry fish curry with rice) - Only on weekend",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cn31",
+          "name": "Crab Masala with 1 PC Parota and rice (available on weekend only)",
+          "description": "",
+          "price": 17.99
+        }
+      ]
+    },
+    {
+      "id": "dhum_biryani",
+      "name": "Dhum Biriyani",
+      "description": "Aromatic biryani cooked in traditional dum style (Seeragasamba)",
+      "image": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd",
+      "items": [
+        {
+          "id": "br1",
+          "name": "Chef spl Veg Biriyani (With Salna, Ennai kathrikai and raita (Seeragasamba))",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "br2",
+          "name": "Chicken Thalapakatti (With Salna, Ennai kathrikai and raita (Seeragasamba))",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "br3",
+          "name": "Dindugal Mutton Biriyani (With Salna, Ennai kathrikai and raita (Seeragasamba))",
+          "description": "",
+          "price": 17.99
+        }
       ]
     },
     {
       "id": "parotta",
-      "name": "Parotta",
-      "description": "Our signature layered flatbread with your choice of curry",
+      "name": "Parotta (Regular)",
+      "description": "Parotta served with salna (2 pcs or 1 pc for ceylon style)",
       "image": "https://images.pexels.com/photos/9609857/pexels-photo-9609857.jpeg",
       "items": [
-        {"id": "p1", "name": "Parotta with Veg Salna", "description": "(2 PC's)", "price": 9.99},
-        {"id": "p2", "name": "Parotta with Egg Salna", "description": "(2 PC's)", "price": 9.99},
-        {"id": "p3", "name": "Parotta with Chicken Salna", "description": "(2 PC's)", "price": 12.99},
-        {"id": "p4", "name": "Parotta with Mutton Salna", "description": "(2 PC's)", "price": 14.49},
-        {"id": "p5", "name": "Ceylon Veechu with Veg Salna", "description": "(1 PC)", "price": 10.99},
-        {"id": "p6", "name": "Ceylon Veechu with Chicken Salna", "description": "(1 PC)", "price": 11.99},
-        {"id": "p7", "name": "Ceylon Veechu with Mutton Salna", "description": "(1 PC)", "price": 13.49}
+        {
+          "id": "p1",
+          "name": "Parotta with Veg Salna (2 PC's)",
+          "description": "",
+          "price": 10.49
+        },
+        {
+          "id": "p2",
+          "name": "Parotta with Egg Salna (2 PC's)",
+          "description": "",
+          "price": 10.49
+        },
+        {
+          "id": "p3",
+          "name": "Parotta with Chicken Salna (2 PC's)",
+          "description": "",
+          "price": 13.49
+        },
+        {
+          "id": "p4",
+          "name": "Parotta with Mutton Salna (2 PC's)",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "p5",
+          "name": "Ceylon Veechu with Veg Salna (1 PC)",
+          "description": "",
+          "price": 11.49
+        },
+        {
+          "id": "p6",
+          "name": "Ceylon Veechu with Egg Salna (1 PC)",
+          "description": "",
+          "price": 11.49
+        },
+        {
+          "id": "p7",
+          "name": "Ceylon Veechu with Chicken Salna (1 PC)",
+          "description": "",
+          "price": 12.49
+        },
+        {
+          "id": "p8",
+          "name": "Ceylon Veechu with Mutton Salna (1 PC)",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "p9",
+          "name": "Ceylon Egg Veechu with Chicken Salna (1 PC)",
+          "description": "",
+          "price": 13.49
+        },
+        {
+          "id": "p10",
+          "name": "Ceylon Egg Veechu with Mutton Salna (1 PC)",
+          "description": "",
+          "price": 14.49
+        }
       ]
     },
     {
-      "id": "kothu",
+      "id": "special_parottas",
+      "name": "Special Parottas",
+      "description": "Stuffed and special parottas",
+      "image": "https://images.pexels.com/photos/23913881/pexels-photo-23913881.jpeg",
+      "items": [
+        {
+          "id": "sp1",
+          "name": "Paneer Lappa Parotta",
+          "description": "",
+          "price": 14.50
+        },
+        {
+          "id": "sp2",
+          "name": "Egg Lappa Parotta",
+          "description": "",
+          "price": 13.50
+        },
+        {
+          "id": "sp3",
+          "name": "Chicken Lappa Parotta",
+          "description": "",
+          "price": 14.50
+        },
+        {
+          "id": "sp4",
+          "name": "Mutton Lappa Parotta",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "sp5",
+          "name": "Ooravecha Veg Parotta",
+          "description": "",
+          "price": 12.50
+        },
+        {
+          "id": "sp6",
+          "name": "Ooravecha Chicken Parotta",
+          "description": "",
+          "price": 14.50
+        },
+        {
+          "id": "sp7",
+          "name": "Ooravecha Mutton Parotta",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "sp8",
+          "name": "Chilli Parotta",
+          "description": "",
+          "price": 12.50
+        }
+      ]
+    },
+    {
+      "id": "kothu_parotta",
       "name": "Kothu Parotta",
       "description": "Shredded parotta tossed with spices and your choice of protein",
       "image": "https://images.pexels.com/photos/23913881/pexels-photo-23913881.jpeg",
       "items": [
-        {"id": "k1", "name": "Veg Kothu Parotta", "description": "Mixed vegetables", "price": 10.99},
-        {"id": "k2", "name": "Paneer Kothu Parotta", "description": "With cottage cheese", "price": 11.99},
-        {"id": "k3", "name": "Egg Kothu Parotta", "description": "With scrambled eggs", "price": 11.99},
-        {"id": "k4", "name": "Chicken Kothu Parotta", "description": "With chicken", "price": 12.99},
-        {"id": "k5", "name": "Mutton Kothu Parotta", "description": "With tender mutton", "price": 15.49}
+        {
+          "id": "k1",
+          "name": "Veg Kothu Parotta",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "k2",
+          "name": "Paneer Kothu Parotta",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "k3",
+          "name": "Egg Kothu Parotta",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "k4",
+          "name": "Chicken Kothu Parotta",
+          "description": "",
+          "price": 13.99
+        },
+        {
+          "id": "k5",
+          "name": "Mutton Kothu Parotta",
+          "description": "",
+          "price": 16.49
+        }
       ]
     },
     {
-      "id": "thali",
-      "name": "Thalis",
-      "description": "Complete meals with rice, curries, and accompaniments",
-      "image": "https://images.unsplash.com/photo-1657196118354-f25f29fe636d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "id": "fried_rice",
+      "name": "Fried Rice",
+      "description": "Fried rice varieties",
+      "image": "",
       "items": [
-        {"id": "t1", "name": "Veg Thali", "description": "Steamed Rice + Paruppu Podi + Roti Pachadi + Mango Thokku + Sambar + Vatha Kozhambu + Rasam + Kootu + Poriyal + Parotta (1 pc) + Gobi 65 (Small Portion) + Appalam/Fryums + Pickle + Gulab Jamun + Curd or Butter Milk", "price": 14.99},
-        {"id": "t2", "name": "Non-veg Thali", "description": "Steamed Rice + Paruppu Podi + Chicken Curry + Fish Curry + Mutton Curry + Sambar + Rasam + Poriyal + Parotta (1 pc) + Chicken 65 (Small Portion) + Appalam/Fryums + Pickle + Gulab Jamun + Curd or Butter Milk", "price": 16.99}
+        {
+          "id": "fr1",
+          "name": "Egg Fried Rice",
+          "description": "",
+          "price": 11.00
+        },
+        {
+          "id": "fr2",
+          "name": "Chicken Fried Rice",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "fr3",
+          "name": "Mutton Fried Rice",
+          "description": "",
+          "price": 15.49
+        },
+        {
+          "id": "fr4",
+          "name": "Curry Chicken Fried Rice",
+          "description": "",
+          "price": 12.99
+        },
+        {
+          "id": "fr5",
+          "name": "Curry Mutton Fried Rice",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "fr6",
+          "name": "Shrimp Fried Rice",
+          "description": "",
+          "price": 13.99
+        }
       ]
     },
     {
-      "id": "curries",
-      "name": "Curries",
-      "description": "Rich and flavorful curries",
-      "image": "https://images.unsplash.com/photo-1586981114766-708f09a71e20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwYXJvdHRhJTIwY3Vycnl8ZW58MHx8fHwxNzYwNjkyNzA5fDA&ixlib=rb-4.1.0&q=85",
+      "id": "veg_meals",
+      "name": "Veg Meals",
+      "description": "Complete veg meal combos",
+      "image": "",
       "items": [
-        {"id": "c1", "name": "Paneer Butter Masala", "description": "Creamy cottage cheese curry", "price": 12.99},
-        {"id": "c2", "name": "Egg Masala", "description": "Boiled eggs in spicy gravy", "price": 9.99},
-        {"id": "c3", "name": "Butter Chicken", "description": "Creamy tomato-based chicken curry", "price": 12.99},
-        {"id": "c4", "name": "Chicken Salna", "description": "Traditional South Indian chicken curry", "price": 10.99},
-        {"id": "c5", "name": "Chennai Chicken Curry", "description": "Authentic Chennai style", "price": 13.00},
-        {"id": "c6", "name": "Mutton Curry", "description": "Slow-cooked mutton curry", "price": 15.00},
-        {"id": "c7", "name": "Fish Curry", "description": "Coastal style fish curry", "price": 14.00},
-        {"id": "c8", "name": "Railway Mutton Curry", "description": "Legendary railway recipe", "price": 16.49}
+        {
+          "id": "vm1",
+          "name": "Gobi 65 + Parotta + Salna + Rice + Sambar + Rasam + Poriyal + Appalam + Veg Biriyani + Pickle",
+          "description": "",
+          "price": 14.99
+        }
       ]
     },
     {
-      "id": "alacarte",
-      "name": "A la Carte",
-      "description": "Appetizers and side dishes",
-      "image": "https://images.unsplash.com/photo-1683533678059-63c6a0e9e3ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
+      "id": "chicken_meals",
+      "name": "Chicken Meals",
+      "description": "Complete chicken meal combos",
+      "image": "",
       "items": [
-        {"id": "a1", "name": "Gobi 65", "description": "Crispy cauliflower", "price": 9.99},
-        {"id": "a2", "name": "Chicken 65", "description": "Spicy fried chicken", "price": 10.99},
-        {"id": "a3", "name": "Chicken Lollipop", "description": "Drummettes in spicy coating", "price": 10.99},
-        {"id": "a4", "name": "Chicken Pepper Fry", "description": "Dry pepper chicken", "price": 13.00},
-        {"id": "a5", "name": "Mutton Chukka", "description": "Dry mutton fry", "price": 17.49},
-        {"id": "a6", "name": "Paneer Manchurian", "description": "Indo-Chinese cottage cheese", "price": 13.00}
+        {
+          "id": "cm1",
+          "name": "Chicken 65 + Parotta / Salna + Rice",
+          "description": "",
+          "price": 15.99
+        },
+        {
+          "id": "cm2",
+          "name": "Chicken curry + Chicken Biriyani + Rasam",
+          "description": "",
+          "price": 15.99
+        }
+      ]
+    },
+    {
+      "id": "fish_meals",
+      "name": "Fish Meals",
+      "description": "Complete fish meal combos",
+      "image": "",
+      "items": [
+        {
+          "id": "fm1",
+          "name": "Fish Fry + Parotta/Salna + Fish curry + Rice + Rasam + Poriyal",
+          "description": "",
+          "price": 16.99
+        }
+      ]
+    },
+    {
+      "id": "mutton_meals",
+      "name": "Mutton Meals",
+      "description": "Complete mutton meal combos",
+      "image": "",
+      "items": [
+        {
+          "id": "mm1",
+          "name": "Mutton Chukka + Parotta Salna + Rice + Mutton curry + Mutton Biriyani + Rasam",
+          "description": "",
+          "price": 17.99
+        }
+      ]
+    },
+    {
+      "id": "veg_thali",
+      "name": "Veg Thali",
+      "description": "Complete veg thali with rice, curries & accompaniments",
+      "image": "https://images.unsplash.com/photo-1657196118354-f25f29fe636d",
+      "items": [
+        {
+          "id": "vt1",
+          "name": "Veg Thali (Steamed Rice + Paruppu Podi + Sambar + Vatha Kozhambu + Rasam + Kootu + Poriyal + Parotta (1 pc) + Gobi 65 (Small Portion) + Appalam/Fryums + Pickle + Gulab Jamun + Curd)",
+          "description": "",
+          "price": 15.99
+        }
+      ]
+    },
+    {
+      "id": "nonveg_thali",
+      "name": "Non-Veg Thali",
+      "description": "Complete non-veg thali with rice, curries & accompaniments",
+      "image": "https://images.unsplash.com/photo-1657196118354-f25f29fe636d",
+      "items": [
+        {
+          "id": "nvt1",
+          "name": "Non-Veg Thali (Steamed Rice + Chicken Curry + Fish Curry + Mutton Curry + Sambar + Rasam + Poriyal + Parotta (1 pc) + Chicken 65 (Small Portion) + Appalam/Fryums + Pickle + Gulab Jamun + Curd)",
+          "description": "",
+          "price": 17.99
+        }
       ]
     },
     {
       "id": "snacks",
-      "name": "Snacks Menu",
-      "description": "Tea-time favorites",
+      "name": "Snacks",
+      "description": "Tea-time favorites and small bites",
       "image": "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg",
       "items": [
-        {"id": "s1", "name": "Masala Tea", "description": "Traditional Indian chai", "price": 2.00},
-        {"id": "s2", "name": "Aalu Samosa", "description": "Potato-filled pastry", "price": 2.99},
-        {"id": "s3", "name": "Veg Puffs", "description": "Vegetable stuffed puff", "price": 3.49},
-        {"id": "s4", "name": "Egg Puffs", "description": "Egg stuffed puff", "price": 3.99},
-        {"id": "s5", "name": "Chicken Puffs", "description": "Chicken stuffed puff", "price": 4.49},
-        {"id": "s6", "name": "Potato Bajji with Chutney", "description": "Potato fritters", "price": 3.49},
-        {"id": "s7", "name": "Onion Bajji with Chutney", "description": "Onion fritters", "price": 3.49}
+        {
+          "id": "sn1",
+          "name": "Masala Tea",
+          "description": "Traditional Indian chai",
+          "price": 2.00
+        },
+        {
+          "id": "sn2",
+          "name": "Aalu Samosa",
+          "description": "Potato-filled pastry",
+          "price": 2.99
+        },
+        {
+          "id": "sn3",
+          "name": "Onion Samosa",
+          "description": "",
+          "price": 2.49
+        },
+        {
+          "id": "sn4",
+          "name": "Onion Bajji with Chutney",
+          "description": "",
+          "price": 3.49
+        },
+        {
+          "id": "sn5",
+          "name": "Potato Bajji with Chutney",
+          "description": "",
+          "price": 3.49
+        },
+        {
+          "id": "sn6",
+          "name": "Mirchi Bajji with Chutney",
+          "description": "",
+          "price": 3.99
+        },
+        {
+          "id": "sn7",
+          "name": "Egg Bajji with Chutney",
+          "description": "",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "id": "add_ons",
+      "name": "Add-Ons",
+      "description": "Extras and small sides",
+      "image": "",
+      "items": [
+        {
+          "id": "ad1",
+          "name": "Omlette",
+          "description": "",
+          "price": 3.99
+        },
+        {
+          "id": "ad2",
+          "name": "Masala Omlette",
+          "description": "",
+          "price": 4.99
+        },
+        {
+          "id": "ad3",
+          "name": "Kalaki",
+          "description": "",
+          "price": 4.00
+        },
+        {
+          "id": "ad4",
+          "name": "Egg Podi Mass",
+          "description": "",
+          "price": 5.99
+        },
+        {
+          "id": "ad5",
+          "name": "Kathirikai Side (For Biryani)",
+          "description": "",
+          "price": 4.99
+        },
+        {
+          "id": "ad6",
+          "name": "Half Boil Salt & Pepper",
+          "description": "",
+          "price": 2.49
+        },
+        {
+          "id": "ad7",
+          "name": "Full Boil Salt & Pepper",
+          "description": "",
+          "price": 2.49
+        },
+        {
+          "id": "ad8",
+          "name": "Plain Parotta",
+          "description": "",
+          "price": 3.00
+        },
+        {
+          "id": "ad9",
+          "name": "Kal Dosa",
+          "description": "",
+          "price": 2.50
+        },
+        {
+          "id": "ad10",
+          "name": "Ceylon plain veechu",
+          "description": "",
+          "price": 4.99
+        },
+        {
+          "id": "ad11",
+          "name": "Ceylon egg Veechu",
+          "description": "",
+          "price": 5.99
+        },
+        {
+          "id": "ad12",
+          "name": "Extra egg (boiled)",
+          "description": "",
+          "price": 2.00
+        },
+        {
+          "id": "ad13",
+          "name": "White rice (8 oz)",
+          "description": "",
+          "price": 2.49
+        },
+        {
+          "id": "ad14",
+          "name": "Vatha Kozhambhu (8 oz)",
+          "description": "",
+          "price": 6.99
+        },
+        {
+          "id": "ad15",
+          "name": "Chicken Salna (8 oz)",
+          "description": "",
+          "price": 5.99
+        },
+        {
+          "id": "ad16",
+          "name": "Mutton Salna (8 oz)",
+          "description": "",
+          "price": 8.99
+        },
+        {
+          "id": "ad17",
+          "name": "Plain Appam",
+          "description": "",
+          "price": 3.00
+        }
+      ]
+    },
+    {
+      "id": "idlis_nonveg",
+      "name": "Idlis (Non-Veg)",
+      "description": "Idli served with non-veg curries",
+      "image": "",
+      "items": [
+        {
+          "id": "in1",
+          "name": "Idli / Chicken curry",
+          "description": "",
+          "price": 11.99
+        },
+        {
+          "id": "in2",
+          "name": "Idli / Mutton curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "in3",
+          "name": "Idli / Fish curry",
+          "description": "",
+          "price": 14.99
+        },
+        {
+          "id": "in4",
+          "name": "Idli / Boti curry",
+          "description": "",
+          "price": 16.99
+        }
       ]
     }
   ],
@@ -135,15 +1226,15 @@
       "id": "featured1",
       "name": "Chicken Thalapakatti Biriyani",
       "description": "Our signature biryani cooked in traditional dum style with aromatic Seeragasamba rice, served with Salna, Ennai kathrikai and raita",
-      "price": 14.99,
-      "image": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxiaXJ5YW5pfGVufDB8fHx8MTc2MDY5MTA2NXww&ixlib=rb-4.1.0&q=85",
+      "price": 15.99,
+      "image": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd",
       "category": "Dhum Biriyani"
     },
     {
       "id": "featured2",
-      "name": "Parotta with Chicken Salna",
-      "description": "Our famous layered flatbread served with aromatic chicken curry, a customer favorite",
-      "price": 12.99,
+      "name": "Parotta with Chicken Salna (2 PC's)",
+      "description": "Our famous layered flatbread served with aromatic chicken salna",
+      "price": 13.49,
       "image": "https://images.pexels.com/photos/23913881/pexels-photo-23913881.jpeg",
       "category": "Parotta"
     },
@@ -151,9 +1242,9 @@
       "id": "featured3",
       "name": "Masala Dosa",
       "description": "Crispy golden dosa filled with spiced potato masala, served with sambar and chutney",
-      "price": 11.99,
-      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxTb3V0aCUyMEluZGlhbiUyMGZvb2R8ZW58MHx8fHwxNzYwNjkyNjkyfDA&ixlib=rb-4.1.0&q=85",
-      "category": "Dosa Menu"
+      "price": 12.99,
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976",
+      "category": "Dosa"
     }
   ]
 }
